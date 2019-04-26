@@ -45,7 +45,7 @@ const harryPotter = new Instructor({
 });
 
 
-let favClas = ['JavaScript', 'Python', 'HTML & CSS'];
+// let favClas = ['JavaScript', 'Python', 'HTML & CSS'];
 let bobClass = ['React', 'C', 'HTML'];
 class Student extends Person{
     constructor(props) {
@@ -55,7 +55,9 @@ class Student extends Person{
         this.favSubjects = props.favSubjects;
     }
     listsSubjects() {
-        return this.favSubjects;
+        for (let i = 0; i < this.favSubjects.length; i++) {
+            console.log(`${this.favSubjects[i]}`);
+        }
     }
     PRAssignment(subject) {
         return `${this.name} has submitted a PR for ${subject}`;
@@ -71,7 +73,7 @@ const me = new Student({
     gender: 'male',
     previousBackground: 'warehouse worker',
     className: 'WEBPT6',
-    favSubjects: favClas
+    favSubjects: ['JavaScript', 'Python', 'HTML & CSS']
 });
 const student1 = new Student({
     name: 'Bob',
